@@ -49,7 +49,7 @@ export default function BlogsPage({
 
         <Container>
 
-          <h1 className="text-5xl font-bold text-white">
+          <h1 className="text-5xl font-bold text-slate-950 dark:text-white">
             All Blogs
           </h1>
 

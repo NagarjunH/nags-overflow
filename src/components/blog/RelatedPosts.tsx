@@ -16,7 +16,7 @@ const RelatedPosts = ({
 
   return (
     <section className="mt-24">
-      <h2 className="text-4xl font-bold text-white">
+      <h2 className="text-4xl font-bold text-slate-950 dark:text-white">
         Related Posts
       </h2>
 

@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
 
-    <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-xl transition-colors dark:border-slate-800 dark:bg-slate-950/80">
 
       <Container>
 
@@ -96,7 +96,7 @@ const Navbar = () => {
                   className={`relative text-sm font-semibold tracking-wide transition duration-300 ${
                     isActive
                       ? "text-cyan-400"
-                      : "text-slate-300 hover:text-cyan-400"
+                      : "text-slate-700 hover:text-cyan-400 dark:text-slate-300"
                   }`}
                 >
 

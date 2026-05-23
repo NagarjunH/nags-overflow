@@ -13,11 +13,11 @@ export default function TermsPage() {
 
           <div className="max-w-4xl">
 
-            <h1 className="text-5xl font-bold text-white">
+            <h1 className="text-5xl font-bold text-slate-950 dark:text-white">
               Terms & Conditions
             </h1>
 
-            <p className="mt-8 text-lg leading-relaxed text-slate-400">
+            <p className="mt-8 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
               By using this website, you agree to the terms and conditions of the platform.
             </p>
 

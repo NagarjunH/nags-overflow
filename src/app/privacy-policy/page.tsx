@@ -13,11 +13,11 @@ export default function PrivacyPolicyPage() {
 
           <div className="max-w-4xl">
 
-            <h1 className="text-5xl font-bold text-white">
+            <h1 className="text-5xl font-bold text-slate-950 dark:text-white">
               Privacy Policy
             </h1>
 
-            <p className="mt-8 text-lg leading-relaxed text-slate-400">
+            <p className="mt-8 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
               This website may collect analytics and usage data to improve user experience.
             </p>
 

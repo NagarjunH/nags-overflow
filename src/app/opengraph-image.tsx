@@ -32,7 +32,7 @@ export default function OGImage() {
             fontWeight: 700,
           }}
         >
-          Nag's Overflow
+          Nag&apos;s Overflow
         </h1>
 
         <p

@@ -1,4 +1,5 @@
 import ReactMarkdown from "react-markdown";
+import { ReactNode } from "react";
 
 import remarkGfm from "remark-gfm";
 
@@ -26,7 +27,7 @@ const BlogContent = ({
             return (
               <h1
                 id={id}
-                className="mb-6 mt-12 text-5xl font-bold text-white"
+                className="mb-6 mt-12 text-5xl font-bold text-slate-950 dark:text-white"
               >
                 {children}
               </h1>
@@ -41,7 +42,7 @@ const BlogContent = ({
             return (
               <h2
                 id={id}
-                className="mb-5 mt-10 text-4xl font-bold text-white"
+                className="mb-5 mt-10 text-4xl font-bold text-slate-950 dark:text-white"
               >
                 {children}
               </h2>
@@ -49,24 +50,27 @@ const BlogContent = ({
           },
 
           h3: ({ children }) => (
-            <h3 className="mb-4 mt-8 text-3xl font-bold text-white">
+            <h3 className="mb-4 mt-8 text-3xl font-bold text-slate-950 dark:text-white">
               {children}
             </h3>
           ),
 
           p: ({ children }) => (
-            <p className="mb-6 text-lg leading-relaxed text-slate-300">
+            <p className="mb-6 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
               {children}
             </p>
           ),
 
           li: ({ children }) => (
-            <li className="ml-6 list-disc text-slate-300">
+            <li className="ml-6 list-disc text-slate-700 dark:text-slate-300">
               {children}
             </li>
           ),
 
-          code(props: any) {
+          code(props: {
+            children?: ReactNode;
+            className?: string;
+          }) {
             const {
               children,
               className,
@@ -90,7 +94,7 @@ const BlogContent = ({
                 )}
               </SyntaxHighlighter>
             ) : (
-              <code className="rounded bg-slate-800 px-2 py-1 text-sky-400">
+              <code className="rounded bg-slate-100 px-2 py-1 text-sky-600 dark:bg-slate-800 dark:text-sky-400">
                 {children}
               </code>
             );

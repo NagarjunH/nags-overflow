@@ -14,7 +14,6 @@ import {
 
 import { extractHeadings } from "@/lib/toc";
 
-import { Blog } from "@/types/blog.types";
 import AdsenseBanner from "@/components/ads/AdsenseBanner";
 
 type BlogDetailsPageProps = {
@@ -94,7 +93,7 @@ export default function BlogDetailsPage({
     return (
       <MainLayout>
         <Container>
-          <div className="py-24 text-white">
+          <div className="py-24 text-slate-950 dark:text-white">
             Blog not found.
           </div>
         </Container>
@@ -153,13 +152,13 @@ export default function BlogDetailsPage({
 
               {/* Title */}
 
-              <h1 className="mt-8 text-6xl font-bold leading-tight text-white">
+              <h1 className="mt-8 text-6xl font-bold leading-tight text-slate-950 dark:text-white">
                 {blog.title}
               </h1>
 
               {/* Metadata */}
 
-              <div className="mt-8 flex flex-wrap items-center gap-6 text-slate-400">
+              <div className="mt-8 flex flex-wrap items-center gap-6 text-slate-600 dark:text-slate-400">
 
                 <span>
                   Author: {blog.author}
@@ -195,7 +194,7 @@ export default function BlogDetailsPage({
                     <Link
                       key={tag}
                       href={`/tag/${tag}`}
-                      className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300 transition hover:border-sky-500 hover:text-sky-400"
+                      className="rounded-full border border-slate-300 px-4 py-2 text-sm text-slate-600 transition hover:border-sky-500 hover:text-sky-400 dark:border-slate-700 dark:text-slate-300"
                     >
                       #{tag}
                     </Link>

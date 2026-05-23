@@ -32,7 +32,7 @@ const Pagination = ({
             className={`flex h-12 w-12 items-center justify-center rounded-xl border transition ${
               isActive
                 ? "border-sky-500 bg-sky-500/10 text-sky-400"
-                : "border-slate-700 text-slate-400 hover:border-sky-500 hover:text-sky-400"
+                : "border-slate-300 text-slate-600 hover:border-sky-500 hover:text-sky-400 dark:border-slate-700 dark:text-slate-400"
             }`}
           >
             {page}

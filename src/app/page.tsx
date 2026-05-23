@@ -14,13 +14,13 @@ export default function HomePage() {
         Modern Developer Blog
       </span>
 
-      <h1 className="mt-8 text-7xl font-bold leading-tight text-white">
+      <h1 className="mt-8 text-7xl font-bold leading-tight text-slate-950 dark:text-white">
         Deep Dive Into
         Modern Software
         Engineering
       </h1>
 
-      <p className="mt-8 text-xl leading-relaxed text-slate-400">
+      <p className="mt-8 text-xl leading-relaxed text-slate-600 dark:text-slate-400">
         Learn React, JavaScript,
         AI Engineering, Automation
         and scalable frontend

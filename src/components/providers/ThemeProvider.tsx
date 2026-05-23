@@ -2,13 +2,15 @@
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-type ThemeProviderProps = {
-  children: React.ReactNode;
+import { ReactNode } from "react";
+
+type Props = {
+  children: ReactNode;
 };
 
 const ThemeProvider = ({
   children,
-}: ThemeProviderProps) => {
+}: Props) => {
 
   return (
     <NextThemesProvider
@@ -21,4 +23,4 @@ const ThemeProvider = ({
   );
 };
 
-export default ThemeProvider; 
+export default ThemeProvider;

@@ -14,7 +14,7 @@ const BlogCard = ({
   return (
     <Link
       href={`/blogs/${blog.slug}`}
-      className="group overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/60 transition hover:-translate-y-1 hover:border-sky-500"
+      className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:border-sky-500 dark:border-slate-800 dark:bg-slate-900/60"
     >
       {/* Thumbnail */}
 
@@ -42,15 +42,15 @@ const BlogCard = ({
           </span>
         </div>
 
-        <h3 className="mt-6 text-2xl font-bold text-white transition group-hover:text-sky-400">
+        <h3 className="mt-6 text-2xl font-bold text-slate-950 transition group-hover:text-sky-400 dark:text-white">
           {blog.title}
         </h3>
 
-        <p className="mt-4 leading-relaxed text-slate-400">
+        <p className="mt-4 leading-relaxed text-slate-600 dark:text-slate-400">
           {blog.description}
         </p>
 
-        <div className="mt-8 flex items-center justify-between border-t border-slate-800 pt-6 text-sm text-slate-500">
+        <div className="mt-8 flex items-center justify-between border-t border-slate-200 pt-6 text-sm text-slate-500 dark:border-slate-800">
           <span>{blog.author}</span>
 
           <span>{blog.publishedAt}</span>

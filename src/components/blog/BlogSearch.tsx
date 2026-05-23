@@ -46,7 +46,7 @@ const BlogSearch = ({
           onChange={(e) =>
             setQuery(e.target.value)
           }
-          className="h-14 w-full rounded-2xl border border-slate-700 bg-slate-900 px-5 text-white outline-none transition focus:border-sky-500"
+          className="h-14 w-full rounded-2xl border border-slate-300 bg-white px-5 text-slate-950 outline-none transition focus:border-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
         />
 
       </div>
@@ -72,13 +72,13 @@ const BlogSearch = ({
 
       ) : (
 
-        <div className="rounded-3xl border border-slate-800 bg-slate-900/50 p-12 text-center">
+        <div className="rounded-3xl border border-slate-200 bg-white p-12 text-center dark:border-slate-800 dark:bg-slate-900/50">
 
-          <h3 className="text-2xl font-bold text-white">
+          <h3 className="text-2xl font-bold text-slate-950 dark:text-white">
             No blogs found
           </h3>
 
-          <p className="mt-4 text-slate-400">
+          <p className="mt-4 text-slate-600 dark:text-slate-400">
             Try searching with different keywords.
           </p>
 

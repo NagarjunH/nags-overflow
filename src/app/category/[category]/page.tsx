@@ -53,7 +53,7 @@ export default function CategoryPage({
 
         <Container>
 
-          <h1 className="text-5xl font-bold capitalize text-white">
+          <h1 className="text-5xl font-bold capitalize text-slate-950 dark:text-white">
 
             {params.category} Blogs
 
