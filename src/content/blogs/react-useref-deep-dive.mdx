@@ -1,0 +1,40 @@
+---
+title: "React useRef Deep Dive"
+
+description: "Learn how useRef works internally in React."
+
+slug: "react-useref-deep-dive"
+
+category: "React"
+
+author: "Naga"
+
+publishedAt: "May 24, 2026"
+
+tags:
+  - React
+  - Hooks
+  - JavaScript
+  
+---
+
+# React useRef Deep Dive
+
+React `useRef` is one of the most powerful hooks.
+
+It helps:
+- persist values
+- access DOM elements
+- avoid unnecessary renders
+
+---
+
+## Why useRef matters
+
+`useRef` does not trigger re-render.
+
+```js
+const ref = useRef(null);
+
+console.log(ref);
+```

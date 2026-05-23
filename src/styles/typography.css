@@ -1,0 +1,27 @@
+.prose-content {
+  max-width: 100%;
+}
+
+.prose-content strong {
+  color: white;
+}
+
+.prose-content code {
+  font-size: 0.95rem;
+}
+
+.prose-content pre {
+  overflow-x: auto;
+  border-radius: 1rem;
+}
+
+.prose-content a {
+  color: #38bdf8;
+}
+
+.prose-content blockquote {
+  border-left: 4px solid #0ea5e9;
+  padding-left: 1rem;
+  color: #94a3b8;
+  margin: 2rem 0;
+}
