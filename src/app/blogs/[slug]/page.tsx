@@ -36,7 +36,7 @@ type GenerateMetadataProps = {
 export async function generateStaticParams() {
   const blogs = getAllBlogs();
 
-  return blogs.map((blog: Blog) => ({
+  return blogs.map((blog) => ({
     slug: blog.slug,
   }));
 }

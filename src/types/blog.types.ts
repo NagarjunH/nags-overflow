@@ -1,6 +1,4 @@
 export type Blog = {
-  id?: number;
-
   title: string;
 
   description: string;
@@ -9,13 +7,15 @@ export type Blog = {
 
   category: string;
 
-  readTime: string;
-
   author: string;
 
   publishedAt: string;
 
-  tags?: string[];
+  tags: string[];
 
-  content?: string;
+  content: string;
+
+  readTime: string;
+
+  coverImage?: string;
 };
