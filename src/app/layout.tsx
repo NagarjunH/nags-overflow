@@ -19,6 +19,9 @@ const geistMono =
   });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+  "https://nags-overflow.vercel.app"
+  ),
   title: "Nag's Overflow",
   description:
     "Deep dive into React, JavaScript, AI Engineering and System Design.",

@@ -6,16 +6,24 @@ import matter from "gray-matter";
 
 import readingTime from "reading-time";
 
+import { Blog } from "@/types/blog.types";
+
 const blogsDirectory = path.join(
   process.cwd(),
   "src/content/blogs"
 );
 
-export function getAllBlogs() {
+/* ----------------------------- */
+/* Get All Blogs */
+/* ----------------------------- */
+
+export function getAllBlogs(): Blog[] {
+
   const files =
     fs.readdirSync(blogsDirectory);
 
   return files.map((fileName) => {
+
     const filePath = path.join(
       blogsDirectory,
       fileName
@@ -28,51 +36,59 @@ export function getAllBlogs() {
       matter(fileContent);
 
     return {
-      ...data,
+
+      title:
+        data.title || "",
+
+      description:
+        data.description || "",
+
+      slug:
+        data.slug ||
+        fileName.replace(".mdx", ""),
+
+      category:
+        data.category || "",
+
+      author:
+        data.author || "",
+
+      publishedAt:
+        data.publishedAt || "",
+
+      tags:
+        data.tags || [],
 
       content,
 
-      readingTime:
+      readTime:
         readingTime(content).text,
+
+      coverImage:
+        data.coverImage || "",
     };
   });
 }
 
+/* ----------------------------- */
+/* Get Single Blog By Slug */
+/* ----------------------------- */
+
 export function getBlogBySlug(
   slug: string
-) {
-  const files =
-    fs.readdirSync(blogsDirectory);
+): Blog | null {
 
-  const matchedFile = files.find(
-    (file) =>
-      file.replace(".mdx", "") === slug
+  const blogs =
+    getAllBlogs();
+
+  return (
+    blogs.find(
+      (blog) =>
+        blog.slug === slug
+    ) || null
   );
-
-  if (!matchedFile) {
-    return null;
-  }
-
-  const filePath = path.join(
-    blogsDirectory,
-    matchedFile
-  );
-
-  const fileContent =
-    fs.readFileSync(filePath, "utf-8");
-
-  const { data, content } =
-    matter(fileContent);
-
-  return {
-    ...data,
-
-    content,
-
-    readingTime:
-      readingTime(content).text,
-  };
 }
+
 /* ----------------------------- */
 /* Get Blogs By Category */
 /* ----------------------------- */
@@ -89,7 +105,8 @@ export function getBlogsByCategory(
       blog.category
         .toLowerCase()
         ===
-      category.toLowerCase()
+      decodeURIComponent(category)
+        .toLowerCase()
   );
 }
 
@@ -109,8 +126,9 @@ export function getBlogsByTag(
       blog.tags?.some(
         (item) =>
           item.toLowerCase()
-            ===
-          tag.toLowerCase()
+          ===
+          decodeURIComponent(tag)
+            .toLowerCase()
       )
   );
 }
